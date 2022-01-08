@@ -1,4 +1,4 @@
-<?php $this->title = "e-learning - User Login and Registration" ?>
+<?php $this->title = "QUIZ-CPP - User Login and Registration" ?>
 
 <div class="container">
 
@@ -11,15 +11,14 @@
             <button type="button" class="toggle-btn" onclick="register()"> Register</button>
         </div>
             
-        <form id="login" class="input-group" action="User.php" method="post">
+        <form id="login" class="input-group" action="connection/connect" method="post">
             <input type="text" class="input-field" name="user" placeholder="User Id" required>
             <input type="password" class="input-field" name="password" placeholder="Enter Password" required>
             <input type="checkbox" class="check-box"><span>Remember Password</span>
             <button type="submit" class="submit-btn">Log In</button>
         </form>
-        <form id="register" class="input-group" action="User.php" method="post">
+        <form id="register" class="input-group" action="connection/register" method="post">
             <input type="text" class="input-field" name="user" placeholder="User Id" required>
-            <input type="email"  class="input-field"  name="mail" id="email" pattern="[^ @]*@[^ @]*" placeholder="Enter email address"required>
             <input type="password" class="input-field" name="password" placeholder="Enter Password" required>
             <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
             <button type="submit" class="submit-btn">Register</button>

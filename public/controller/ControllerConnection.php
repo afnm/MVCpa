@@ -3,7 +3,6 @@
 require_once 'framework/Controller.php';
 require_once 'model/User.php';
 
-
 class ControllerConnection extends Controller
 {
     private $user;
@@ -27,8 +26,6 @@ class ControllerConnection extends Controller
                 $user = $this->user->getUser($login, $pwd);
                 $this->request->getSession()->setAttribute("idUser", $user['idUser']);
                 $this->request->getSession()->setAttribute("login", $user['login']);
-                $this->request->getSession()->setAttribute("admin", $user['admin']);
-                $this->redirect("admin");
             }
             else
                 $this->generateView(array('msgError' => 'Incorrect username or password'), "index");
@@ -40,7 +37,7 @@ class ControllerConnection extends Controller
     public function disconnect()
     {
         $this->request->getSession()->destroy();
-        $this->redirect("Connection");
+        $this->redirect("home");
     }
 
 }
